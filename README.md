@@ -99,6 +99,8 @@ ________________________________________
 
 🔗 Additional Resources
 
-•	Video-LLaMA GitHub Repository
-•	Video-LLaMA Paper: An Instruction-tuned Audio-Visual Language Model for Video UnderstandingarXiv
-•	Video-LLaMA 2 Paper: Advancing Spatial-Temporal Modeling and Audio Understanding in Video-LLMsarXiv
+•	[Video-LLaMA GitHub Repository](https://github.com/DAMO-NLP-SG/Video-LLaMA)
+
+•	[Video-LLaMA Paper: An Instruction-tuned Audio-Visual Language Model for Video UnderstandingarXiv](https://arxiv.org/abs/2306.02858)
+
+•	[Video-LLaMA 2 Paper: Advancing Spatial-Temporal Modeling and Audio Understanding in Video-LLMsarXiv](https://arxiv.org/abs/2406.07476)
