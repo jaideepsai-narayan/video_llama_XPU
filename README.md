@@ -64,23 +64,19 @@ Cause: The model is attempting to use mixed precision (FP16), but the input is i
 Solution:
 1.	Update the video_llama.yaml configuration file:
 yaml
-CopyEdit
 vit_precision: fp32
-2.	Modify the video_llama.py script:
-o	Line 54:
-python
-CopyEdit
+
+3.	Modify the video_llama.py script:
+-> Line 54:
 vit_precision = "fp32"
-o	Remove lines 137–139 and 144 to disable loading of mixed precision models.
-o	Line 549:
-python
-CopyEdit
+
+Remove lines 137–139 and 144 to disable loading of mixed precision models.
+-> Line 549:
 vit_precision = cfg.get("vit_precision", "fp32")
 ________________________________________
 📄 Final Configuration Example
 After applying all the fixes, your video_llama_eval_withaudio.yaml should resemble:
-yaml
-CopyEdit
+
 llama_model: ./Video-LLaMA-2-7B-Pretrained/llama-2-7b-chat-hf
 imagebind_checkpoint: ./Video-LLaMA-2-7B-Pretrained/
 checkpoint_path1: /Video-LLaMA-2-7B-Pretrained/VL_LLaMA_2_7B_Pretrained.pth
@@ -89,6 +85,7 @@ vit_precision: fp32
 ________________________________________
 ________________________________________
 👩🏻‍💻 Running the model on XPU:
+
 To load the model on xpu run the below:
 After loading the model to the CPU, we need to map the weights to the XPU using the following command:
 model.to(“xpu”)
@@ -97,6 +94,7 @@ https://github.com/jaideepsai-narayan/video-analytics/blob/main/running_on_xpu.i
 ________________________________________
 
 🔗 Additional Resources
+
 •	Video-LLaMA GitHub Repository
 •	Video-LLaMA Paper: An Instruction-tuned Audio-Visual Language Model for Video UnderstandingarXiv
 •	Video-LLaMA 2 Paper: Advancing Spatial-Temporal Modeling and Audio Understanding in Video-LLMsarXiv
