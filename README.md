@@ -70,7 +70,7 @@ vit_precision: fp32
 -> Line 54:
 vit_precision = "fp32"
 
-Remove lines 137–139 and 144 to disable loading of mixed precision models.
+Remove/comment the lines 137–139 and 144 to disable loading of mixed precision models.
 -> Line 549:
 vit_precision = cfg.get("vit_precision", "fp32")
 ________________________________________
@@ -78,9 +78,13 @@ ________________________________________
 After applying all the fixes, your video_llama_eval_withaudio.yaml should resemble:
 
 llama_model: ./Video-LLaMA-2-7B-Pretrained/llama-2-7b-chat-hf
+
 imagebind_checkpoint: ./Video-LLaMA-2-7B-Pretrained/
+
 checkpoint_path1: /Video-LLaMA-2-7B-Pretrained/VL_LLaMA_2_7B_Pretrained.pth
+
 checkpoint_path2: /Video-LLaMA-2-7B-Pretrained/AL_LLaMA_2_7B_Pretrained.pth
+
 vit_precision: fp32
 ________________________________________
 ________________________________________
